@@ -11,6 +11,8 @@ import { DiscussionComponent } from './Details/discussion/discussion.component';
 import {DetailsComponent} from "./Details/details/details.component";
 import {ROUTING} from "./app.routing";
 import {FormsModule} from "@angular/forms";
+import { LoginComponent } from './Login/login/login.component';
+import { HeaderComponent } from './Header/header/header.component';
 
 @NgModule({
     declarations: [
@@ -21,7 +23,9 @@ import {FormsModule} from "@angular/forms";
         ReservationComponent,
         AboutComponent,
         DiscussionComponent,
-        DetailsComponent
+        DetailsComponent,
+        LoginComponent,
+        HeaderComponent
     ],
     imports: [
         BrowserModule,
