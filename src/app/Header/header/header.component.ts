@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AuthService} from "../../Services/auth.service";
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+
+  constructor(
+    public authService: AuthService
+  ) {
+  }
+
+  //getButtonText(){
+  //  return this.authService.IsLoggedIn() ? 'Logout' : 'Login';
+  //}
 
 }

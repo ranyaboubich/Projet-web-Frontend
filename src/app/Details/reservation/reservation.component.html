@@ -2,5 +2,5 @@
   <img class="book-cover" src="{{book.cover}}" alt="{{book.title}}">
 </div>
 <div class="button-container">
-  <button [ngClass]="{'btn': true, 'btn-outline-success': book.waitingList.length == 0, 'btn-outline-secondary': book.waitingList.length > 0}">{{getButtonText()}}</button>
+  <button [ngClass]="{'btn': true, 'btn-outline-success': book.waitingList.length == 0, 'btn-outline-secondary': book.waitingList.length > 0} ">{{getButtonText()}}</button>
 </div>
