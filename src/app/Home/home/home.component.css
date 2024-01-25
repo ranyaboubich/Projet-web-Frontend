@@ -5,6 +5,7 @@
   height: 100vh;
   color: #343a40;
   background-image: url("/assets/fairy_reading.png");
+  background-repeat: no-repeat, repeat;
 }
 
 .row {
@@ -37,6 +38,7 @@
 h1 {
   font-size: 2.5em;
   margin-bottom: 20px;
+  color: #9f3f2d;
 }
 
 p {
@@ -45,5 +47,5 @@ p {
 }
 
 .page{
-  background-color: burlywood;
+  background-color: #f4ecd7;
 }

@@ -17,6 +17,7 @@ import { EventComponent } from './Events/event/event.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { HomeComponent } from './Home/home/home.component';
 import { SigninComponent } from './SignIn/signin/signin.component';
+import { AdminComponent } from './Admin/admin/admin.component';
 
 @NgModule({
     declarations: [
@@ -32,7 +33,8 @@ import { SigninComponent } from './SignIn/signin/signin.component';
         HeaderComponent,
         EventComponent,
         HomeComponent,
-        SigninComponent
+        SigninComponent,
+        AdminComponent
     ],
     imports: [
         BrowserModule,
