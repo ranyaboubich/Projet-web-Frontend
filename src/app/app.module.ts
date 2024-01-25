@@ -13,6 +13,10 @@ import {ROUTING} from "./app.routing";
 import {FormsModule} from "@angular/forms";
 import { LoginComponent } from './Login/login/login.component';
 import { HeaderComponent } from './Header/header/header.component';
+import { EventComponent } from './Events/event/event.component';
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { HomeComponent } from './Home/home/home.component';
+import { SigninComponent } from './SignIn/signin/signin.component';
 
 @NgModule({
     declarations: [
@@ -25,13 +29,17 @@ import { HeaderComponent } from './Header/header/header.component';
         DiscussionComponent,
         DetailsComponent,
         LoginComponent,
-        HeaderComponent
+        HeaderComponent,
+        EventComponent,
+        HomeComponent,
+        SigninComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         ROUTING,
-        FormsModule
+        FormsModule,
+        HttpClientModule
     ],
   providers: [],
   bootstrap: [AppComponent]

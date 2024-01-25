@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Book} from "../../Model/Book";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-reservation',
@@ -10,7 +11,9 @@ export class ReservationComponent {
 
   @Input() book: Book;
 
-  constructor() {
+  constructor(
+    private route: Router,
+  ) {
     this.book = new Book(0, '', '', '', '', '',[]);
   }
   ngOnInit(): void {
@@ -18,6 +21,17 @@ export class ReservationComponent {
   getButtonText(): string {
     return this.book.waitingList.length === 0 ? 'Reserve' : 'Join Waitlist';
   }
+
+  CheckLogin(){
+    if(localStorage.getItem('user') == null){
+      this.route.navigate(['login']);
+    }
+    //else{
+     // return true;
+    //}
+  }
+
+
 
 
 }

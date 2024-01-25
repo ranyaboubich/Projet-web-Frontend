@@ -2,12 +2,18 @@ import {RouterModule, Routes} from "@angular/router";
 import {DetailsComponent} from "./Details/details/details.component";
 import {LibraryComponent} from "./Library/library/library.component";
 import {LoginComponent} from "./Login/login/login.component";
+import {EventComponent} from "./Events/event/event.component";
+import {HomeComponent} from "./Home/home/home.component";
+import {SigninComponent} from "./SignIn/signin/signin.component";
 
 
 const APP_ROUTING: Routes = [
-  {path: '', redirectTo: 'library', pathMatch: 'full'},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'home', component: HomeComponent},
   {path: 'library', component: LibraryComponent},
   {path: 'details/:id', component: DetailsComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'signin', component: SigninComponent},
+  {path: 'events', component: EventComponent}
   ];
 export const ROUTING = RouterModule.forRoot(APP_ROUTING);
