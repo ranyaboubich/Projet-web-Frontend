@@ -1,15 +1,30 @@
-import {Component, Input} from '@angular/core';
-import {Book} from "../../Model/Book";
+import { Component, OnInit } from '@angular/core';
+import { Review } from './review.model';
+import { ReviewService } from '../../Services/review.service';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-discussion',
   templateUrl: './discussion.component.html',
-  styleUrl: './discussion.component.css'
+  styleUrls: ['./discussion.component.css'],
 })
-export class DiscussionComponent {
+export class DiscussionComponent implements OnInit {
+  reviews: Review[] = [];
+  reviewForm = new FormGroup({
+    comment: new FormControl(''),
+    rating: new FormControl(''),
+  });
 
-  @Input() book: Book;
-  constructor() {
-    this.book = new Book(0, '', '', '', '', '',[]);
+  constructor(private reviewService: ReviewService) {}
+
+  ngOnInit() {
+    this.reviews = this.reviewService.getReviews();
+  }
+  onSubmit() {
+    console.warn(this.reviewForm.value);
+  }
+
+  getStars(rating: number) {
+    return Array(rating);
   }
 }
