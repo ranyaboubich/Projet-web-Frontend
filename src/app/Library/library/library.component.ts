@@ -8,11 +8,17 @@ import { BookService } from '../../Services/book.service';
   styleUrl: './library.component.css',
 })
 export class LibraryComponent {
-  books: Book[];
-  constructor(BookService: BookService) {
-    this.books = BookService.getBooks();
-  }
+  books!: Book[];
+  constructor(private bookService: BookService) {}
+
   ngOnInit(): void {
-    console.log('on init');
+    this.bookService.getBooks().subscribe({
+      next: (books: Book[]) => {
+        this.books = books;
+      },
+      error: (error) => {
+        console.error('Error fetching books', error);
+      },
+    });
   }
 }
