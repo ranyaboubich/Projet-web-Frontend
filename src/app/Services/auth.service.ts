@@ -9,6 +9,7 @@ import {Router} from "@angular/router";
 export class AuthService {
   private currentUserSubject: BehaviorSubject<any>;
   public currentUserValue: any;
+  public accessToken: any;
 
   constructor(
     private http: HttpClient,
@@ -26,6 +27,7 @@ export class AuthService {
         localStorage.setItem('currentUser', JSON.stringify(user));
         this.currentUserSubject.next(user);
         this.currentUserValue = user;
+        this.accessToken = user.access_token;
       }
       this.router.navigate(['library']);
     return user;

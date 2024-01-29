@@ -1,0 +1,36 @@
+.content {
+  width: 80%;
+  margin: auto;
+}
+
+table {
+  width: 70%; /* Adjust the width to make the table smaller */
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border-radius: 15px; /* Add this to make the edges rounder */
+  overflow: hidden; /* Add this to apply the border-radius to all table elements */
+
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: rosybrown;
+  color: white;
+}

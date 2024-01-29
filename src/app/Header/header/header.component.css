@@ -76,4 +76,5 @@
 .navbar-item.active a,
 .nav-item.active a {
   font-weight:bold ; /* or any other styling for the active link */
+
 }

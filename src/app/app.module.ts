@@ -19,6 +19,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './Home/home/home.component';
 import { SigninComponent } from './SignIn/signin/signin.component';
 import { AdminComponent } from './Admin/admin/admin.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -44,6 +48,8 @@ import { AdminComponent } from './Admin/admin/admin.component';
     ROUTING,
     FormsModule,
     HttpClientModule,
+    MatAutocompleteModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent],
