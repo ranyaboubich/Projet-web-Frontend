@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Review } from './review.model';
+import { Component, Input, OnInit } from '@angular/core';
 import { ReviewService } from '../../Services/review.service';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Review } from '../../Model/Review';
+import { Book } from '../../Model/Book';
 
 @Component({
   selector: 'app-discussion',
@@ -9,6 +10,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./discussion.component.css'],
 })
 export class DiscussionComponent implements OnInit {
+  @Input() book!: Book;
   reviews: Review[] = [];
   reviewForm = new FormGroup({
     comment: new FormControl(''),
@@ -18,7 +20,11 @@ export class DiscussionComponent implements OnInit {
   constructor(private reviewService: ReviewService) {}
 
   ngOnInit() {
-    this.reviews = this.reviewService.getReviews();
+    this.reviewService
+      .getReviews(this.book.title, this.book.author)
+      .subscribe((reviews) => {
+        this.reviews = reviews;
+      });
   }
   onSubmit() {
     console.warn(this.reviewForm.value);

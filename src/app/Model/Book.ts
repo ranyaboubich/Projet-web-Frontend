@@ -1,10 +1,15 @@
+import { Review } from './Review';
+import { WaitingList } from './WaitingList';
+
 export interface Book {
   id: number;
   title: string;
   author: string;
-  genre: string;
-  keywords: string[];
-  cover: string;
-  waitingList: number[];
   instances: number;
+  category: string;
+  keywords: string[];
+  coverImageUrl: string;
+  description: string;
+  reviews: Review[];
+  waitingLists: WaitingList[];
 }

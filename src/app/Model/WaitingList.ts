@@ -1,13 +1,9 @@
-export class WaitingList {
-  id: number;
-  user: number;
-  book: number;
-  joinedAt: Date;
+import { Book } from './Book';
+import { User } from './User';
 
-  constructor(id: number, user: number, book: number, joinedAt: Date) {
-    this.id = id;
-    this.user = user;
-    this.book = book;
-    this.joinedAt = joinedAt;
-  }
+export interface WaitingList {
+  id: number;
+  joinedAt: Date;
+  user: User;
+  book: Book;
 }
