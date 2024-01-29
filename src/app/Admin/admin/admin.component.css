@@ -1,10 +1,18 @@
 .content {
-  width: 80%;
+  width: 70%;
   margin: auto;
+  margin-top: 50px;
+  margin-left: -20%;
+}
+
+.update-user{
+  margin-left: 20%;
+  margin-top: 50px;
+  width: 70%;
 }
 
 table {
-  width: 70%; /* Adjust the width to make the table smaller */
+  width: 90%; /* Adjust the width to make the table smaller */
   border-collapse: collapse;
   margin-bottom: 20px;
   border-radius: 15px; /* Add this to make the edges rounder */
@@ -22,6 +30,9 @@ table th, table td {
 table tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+table tr:nth-child(odd) {
+  background-color: whitesmoke;
+}
 
 table tr:hover {
   background-color: #ddd;
@@ -34,3 +45,14 @@ table th {
   background-color: rosybrown;
   color: white;
 }
+.update-user form .btn, .delete-user form .btn {
+  display: block;
+  margin: 0 auto;
+}
+
+.update-user form input, .delete-user form input {
+  margin-bottom: 10px; /* Adjust this value as needed */
+}
+
+
+

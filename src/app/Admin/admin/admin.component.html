@@ -1,60 +1,80 @@
-<div class="sidebar">
-  <a routerLink="/modify-book">Modify Book</a>
-  <a routerLink="/modify-user">Modify User</a>
-</div>
-
-<div class="content">
-  <h2>Users</h2>
-  <table>
-    <tr>
-      <th>ID</th>
-      <th>Username</th>
-      <th>Email</th>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+  <div class="content">
+    <h2>Users</h2>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Email</th>
       <!-- Add more columns as needed -->
-    </tr>
-    <tr *ngFor="let user of users">
-      <td>{{ user.id }}</td>
-      <td>{{ user.username }}</td>
-      <td>{{ user.email }}</td>
+        </tr>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
       <!-- Add more cells as needed -->
-    </tr>
-  </table>
+        </tr>
+      </table>
 
-  <h2>Reservations</h2>
-  <table>
-    <tr>
-      <th>ID</th>
-      <th>User</th>
-      <th>Book</th>
-      <th>Reserved At</th>
-      <th>Returned At</th>
+    <h2>Reservations</h2>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>User</th>
+          <th>Book</th>
+          <th>Reserved At</th>
+          <th>Returned At</th>
       <!-- Add more columns as needed -->
-    </tr>
-    <tr *ngFor="let reservation of reservations">
-      <td>{{ reservation.id }}</td>
-      <td>{{ reservation.user.username }}</td>
-      <td>{{ reservation.book.title }}</td>
-      <td>{{ reservation.reservedAt }}</td>
-      <td>{{ reservation.returnedAt }}</td>
+        </tr>
+        <tr *ngFor="let reservation of reservations">
+          <td>{{ reservation.id }}</td>
+          <td>{{ reservation.user.username }}</td>
+          <td>{{ reservation.book.title }}</td>
+          <td>{{ reservation.reservedAt }}</td>
+          <td>{{ reservation.returnedAt }}</td>
       <!-- Add more cells as needed -->
-    </tr>
-  </table>
+        </tr>
+      </table>
 
-  <h2>Books</h2>
-  <table>
-    <tr>
-      <th>ID</th>
-      <th>Title</th>
-      <th>author</th>
-      <th>instances</th>
+    <h2>Books</h2>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>author</th>
+          <th>instances</th>
       <!-- Add more columns as needed -->
-    </tr>
-    <tr *ngFor="let book of books">
-      <td>{{ book.id }}</td>
-      <td>{{ book.title}}</td>
-      <td>{{ book.author }}</td>
-      <td>{{ book.instances }}</td>
+        </tr>
+        <tr *ngFor="let book of books">
+          <td>{{ book.id }}</td>
+          <td>{{ book.title}}</td>
+          <td>{{ book.author }}</td>
+          <td>{{ book.instances }}</td>
       <!-- Add more cells as needed -->
-    </tr>
-  </table>
+        </tr>
+      </table>
+  </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="update-user">
+      <form #update_form="ngForm" id="container" (ngSubmit)="updateUser(update_form)">
+        <h2>Update user</h2>
+        <input #idInput="ngModel" required id="id" type="number" ngModel name="id" placeholder="id" class="form-control">
+        <input #emailInput="ngModel" email  id="email" type="text" ngModel name="email" placeholder="Email" class="form-control">
+        <input #usernameInput="ngModel"  id="username" type="text" ngModel name="username" placeholder="Username" class="form-control">
+        <input  id="pass" type="password" ngModel name="pass" class="form-control" placeholder="Password" minlength=4>
+        <button [disabled]="update_form.invalid" class="btn btn-danger">Update</button>
+      </form>
+      </div>
+      <div class="delete-user">
+        <h2>Delete user</h2>
+        <form #delete_form="ngForm" id="delete-user" (ngSubmit)="deleteUser(delete_form.value.id)">
+        <input #idInput="ngModel" required id="id1" type="number" ngModel name="id" placeholder="id" class="form-control">
+        <button [disabled]="delete_form.invalid" class="btn btn-danger">delete</button>
+      </form>
+      </div>
+    </div>
+  </div>
 </div>

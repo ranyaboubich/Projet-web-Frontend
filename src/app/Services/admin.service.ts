@@ -31,7 +31,7 @@ export class AdminService {
   }
 
   updateUser(id: number, user: any) {
-    return this.http.put<User>('http://localhost:3000/users/' + id, user, { headers: this.getHttpHeaders() });
+    return this.http.patch<User>('http://localhost:3000/users/' + id, user, { headers: this.getHttpHeaders() });
   }
 
   getReservations() {
