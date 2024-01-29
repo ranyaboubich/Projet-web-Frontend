@@ -11,8 +11,8 @@
 </form>
 
 <div *ngFor="let review of reviews">
-  <h3>{{ review.username }}</h3>
-  <p>{{ review.comment }}</p>
+  <h3>{{ review.user.username }}</h3>
+  <p>{{ review.content }}</p>
   <p>
     Rating:
     <span *ngFor="let star of getStars(review.rating)">⭐</span>
