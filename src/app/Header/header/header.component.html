@@ -13,14 +13,11 @@
     <li class="nav-item" [routerLinkActive]="'active'">
       <a class="nav-link" [routerLink]="['library']">Library</a>
     </li>
-    <li class="nav-item"  [routerLinkActive]="'active'">
-      <a class="nav-link" *ngIf="currentUser.user.isAdmin" [routerLink]="['admin']">admin</a>
-    </li>
   </ul>
 
   <ul class="navbar-list navbar-list-right">
     <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">
-      <a class="nav-link" *ngIf="!authService.currentUserValue" [routerLink]="['signin']">Signup</a>
+      <a class="nav-link" *ngIf="!authService.currentUserValue; else logout" [routerLink]="['signin']">Signup</a>
     </li>
     <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">
       <a class="nav-link" *ngIf="!authService.currentUserValue; else logout" [routerLink]="['login']">login</a>
@@ -32,4 +29,3 @@
     </li>
   </ul>
 </nav>
-
