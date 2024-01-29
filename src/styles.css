@@ -1,2 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import "bootstrap/dist/css/bootstrap.css";
+
+body{
+    margin-top: 32px;
+    background-image: url("/assets/fairy_reading.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Outfit';
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
