@@ -1,17 +1,10 @@
-import {User} from "./User";
-import {Book} from "./Book";
+import { Book } from './Book';
+import { User } from './User';
 
-export class Reservation{
-    id: number;
-    user: User;
-    book: Book;
-    reservedAt: Date;
-    returnedAt: Date;
-    constructor(id: number, user: User, book: Book, reservedAt: Date, returnedAt: Date) {
-        this.id = id;
-        this.user = user;
-        this.book = book;
-        this.reservedAt = reservedAt;
-        this.returnedAt = returnedAt;
-    }
+export interface reservation {
+  id: number;
+  reservedAt: Date;
+  returnedAt: Date;
+  user: User;
+  book: Book;
 }
