@@ -1,8 +1,19 @@
 .navbar {
   position: fixed;
-  /*background color red*/
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #6d1212;
+  background-color: black;
+}
+
+.navbar-nav {
+  justify-content: center;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.navbar-brand {
+  color: blue;
 }

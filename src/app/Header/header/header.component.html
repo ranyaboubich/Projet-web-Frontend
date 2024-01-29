@@ -17,6 +17,9 @@
           <a class="nav-link" (click)="authService.logout()">Logout</a>
         </ng-template>
       </li>
+      <li *ngIf="currentUser.user.isAdmin" class="nav-item">
+        <a class="nav-link"  [routerLink]="['admin']">admin mode</a>
+      </li>
     </ul>
   </div>
 </nav>

@@ -1,1 +1,60 @@
-<p>admin works!</p>
+<div class="sidebar">
+  <a routerLink="/modify-book">Modify Book</a>
+  <a routerLink="/modify-user">Modify User</a>
+</div>
+
+<div class="content">
+  <h2>Users</h2>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>Email</th>
+      <!-- Add more columns as needed -->
+    </tr>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+      <!-- Add more cells as needed -->
+    </tr>
+  </table>
+
+  <h2>Reservations</h2>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>User</th>
+      <th>Book</th>
+      <th>Reserved At</th>
+      <th>Returned At</th>
+      <!-- Add more columns as needed -->
+    </tr>
+    <tr *ngFor="let reservation of reservations">
+      <td>{{ reservation.id }}</td>
+      <td>{{ reservation.user.username }}</td>
+      <td>{{ reservation.book.title }}</td>
+      <td>{{ reservation.reservedAt }}</td>
+      <td>{{ reservation.returnedAt }}</td>
+      <!-- Add more cells as needed -->
+    </tr>
+  </table>
+
+  <h2>Books</h2>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>author</th>
+      <th>instances</th>
+      <!-- Add more columns as needed -->
+    </tr>
+    <tr *ngFor="let book of books">
+      <td>{{ book.id }}</td>
+      <td>{{ book.title}}</td>
+      <td>{{ book.author }}</td>
+      <td>{{ book.instances }}</td>
+      <!-- Add more cells as needed -->
+    </tr>
+  </table>
+</div>

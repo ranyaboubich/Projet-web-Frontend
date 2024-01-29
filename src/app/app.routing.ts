@@ -6,6 +6,7 @@ import {EventComponent} from "./Events/event/event.component";
 import {HomeComponent} from "./Home/home/home.component";
 import {SigninComponent} from "./SignIn/signin/signin.component";
 import {AdminComponent} from "./Admin/admin/admin.component";
+import {AuthGuard} from "./Login/auth.guard";
 
 const APP_ROUTING: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -15,6 +16,6 @@ const APP_ROUTING: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'signin', component: SigninComponent},
   {path: 'events', component: EventComponent},
-  {path: 'admin', component: AdminComponent},
+  {path: 'admin', component: AdminComponent, canActivate: [AuthGuard]},
   ];
 export const ROUTING = RouterModule.forRoot(APP_ROUTING);

@@ -6,4 +6,5 @@ export interface Book {
   keywords: string[];
   cover: string;
   waitingList: number[];
+  instances: number;
 }
