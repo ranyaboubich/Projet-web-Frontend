@@ -1,51 +1,27 @@
+
+
+/* Style the container inside the page */
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  color: #343a40;
-  background-image: url("/assets/fairy_reading.png");
-  background-repeat: no-repeat, repeat;
-}
-
-.row {
-  width: 100%;
-}
-
-.col-md-6 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.btn {
-  margin-bottom: 10px;
-  border-radius: 20px;
-  padding: 5px 10px;
+ width: 60%;
+  margin-top: 50px;
+  backdrop-filter: contrast(30%);
+  border: 1px solid #b9baaa;
+  border-radius: 8px;
+  padding: 20px;  
 
 }
 
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-.btn-secondary {
-  background-color: #6c757d;
-  border-color: #6c757d;
-}
-
+/* Style the heading */
 h1 {
-  font-size: 2.5em;
+  font-size: 32px;
+  color: #000;
   margin-bottom: 20px;
-  color: #9f3f2d;
 }
 
+/* Style the paragraphs */
 p {
-  font-size: 1.2em;
+  font-size: 16px;
   line-height: 1.6;
-}
-
-.page{
-  background-color: #f4ecd7;
+  color: #000;
+  margin-bottom: 15px;
 }
