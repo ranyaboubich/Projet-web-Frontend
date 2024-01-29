@@ -1,0 +1,11 @@
+.events-container{
+  margin:auto;
+  width: 90%;
+  margin-top: 50px;
+  backdrop-filter: contrast(30%);
+  border: 1px solid #b9baaa;
+  border-radius: 8px;
+  padding: 20px;
+  padding-bottom: 8px;
+  color:black;
+}

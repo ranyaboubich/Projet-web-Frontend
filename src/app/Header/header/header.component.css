@@ -1,19 +1,80 @@
+/* Add this CSS to style the navbar */
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: black;
-}
+  font-size: larger;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px;
+  padding: 6px;
+  padding-left: 30px;
+  padding-right: 30px;
+  backdrop-filter: contrast(70%);
+  border: #b9baaa solid 2px;
 
-.navbar-nav {
-  justify-content: center;
-}
-
-.nav-link:hover {
-  color: white;
+  /* Update with your desired background color */
+  color: #000; /* Update with your desired text color */
 }
 
 .navbar-brand {
-  color: blue;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: larger;
+  font-weight: bold; /* Update with your desired text color */
+}
+
+.navbar-brand i {
+  margin-right: 5px;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin-right: 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000; /* Update with your desired text color */
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.navbar-list-right {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Add space between icon and text */
+.navbar-brand img {
+  margin-right: 5px;
+}
+
+/* Add space between login/sign up options */
+.nav-item a {
+  margin-right: 10px;
+}
+
+.navbar-item.active a,
+.nav-item.active a {
+  font-weight:bold ; /* or any other styling for the active link */
+
 }
