@@ -9,5 +9,7 @@ import { Router } from '@angular/router';
 })
 export class ReservationComponent {
   constructor(private route: Router) {}
+  @Input() book!: Book;
+
   ngOnInit(): void {}
 }

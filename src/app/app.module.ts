@@ -22,6 +22,7 @@ import { AdminComponent } from './Admin/admin/admin.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StarsComponent } from './Details/discussion/stars/stars.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     SigninComponent,
     AdminComponent,
+    StarsComponent,
   ],
   imports: [
     BrowserModule,
