@@ -1,18 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 @import "bootstrap/dist/css/bootstrap.css";
 
-body{
-    margin-top: 32px;
-    background-image: url("/assets/fairy_reading.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Outfit';
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
+body {
+  margin-top: 32px;
+  background-image: url("/assets/fairy_reading.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Outfit";
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

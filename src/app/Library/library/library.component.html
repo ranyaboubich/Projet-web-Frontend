@@ -1,4 +1,14 @@
-<div class="library-container">
-  <app-book class="book" *ngFor="let book of books" [book]="book"></app-book>
+<div
+  class="library-container container-fluid"
+  style="min-height: 100vh; margin-top: 150px"
+>
+  <div class="row gap-3 justify-content-center">
+    <div class="col-lg-2 col-md-4 col-sm-6 mb-3" *ngFor="let book of books">
+      <div class="card" style="background-color: rgba(128, 128, 128, 0.5)">
+        <div class="card-body">
+          <app-book [book]="book"></app-book>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
