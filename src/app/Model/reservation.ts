@@ -1,7 +1,7 @@
 import { Book } from './Book';
 import { User } from './User';
 
-export interface Reservation {
+export interface reservation {
   id: number;
   reservedAt: Date;
   returnedAt: Date;
